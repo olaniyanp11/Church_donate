@@ -28,7 +28,7 @@ export const Home = () => {
                 heading="Donate Today, Empower a Minister"
                 description="Your generous donation will help ministers in need with essential resources such as training, financial support, and more. Together, we can empower them to spread the gospel without limitations."
                 buttonText="Donate Now"
-                buttonLink="/donate"
+                buttonLink="https://bit.ly/ISM-Ministers-Support"
                 overlayColor="#000000cc"
             />
             <SectionalComponent
