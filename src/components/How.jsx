@@ -18,7 +18,7 @@ export const How = () => {
                     className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-6 transform hover:scale-105 transition-all duration-300 relative"
                     whileInView={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0.8 }}
-                   
+                    viewport={{ once: true }}
                     transition={{ duration: 1 }}
                 >
                     <h3 className="text-2xl font-semibold text-accent">How a Minister in Need Can Sign Up</h3>
@@ -39,7 +39,7 @@ export const How = () => {
                     className="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between gap-6 transform hover:scale-105 transition-all duration-300"
                     whileInView={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0.8 }}
-                   
+                    viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.2 }}
                 >
                     <h3 className="text-2xl font-semibold text-accent w-full">How We Support Ministers in Need</h3>
@@ -56,7 +56,7 @@ export const How = () => {
                     className="bg-white p-8 rounded-2xl shadow-lg justify-between flex flex-col gap-6 transform hover:scale-105 transition-all duration-300 relative"
                     whileInView={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0.8 }}
-                   
+                    viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.4 }}
                 >
                     <h3 className="text-2xl font-semibold text-accent">Refer Ministers in Need</h3>

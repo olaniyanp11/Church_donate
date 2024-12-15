@@ -12,7 +12,7 @@ export const AboutSec = () => {
                 className='text-[30px] font-bold text-primary text-center py-7'
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -50 }}
-               
+                viewport={{ once: true }}
                 transition={{ duration: 1 }}
             >
                 About the Initiative
@@ -24,7 +24,7 @@ export const AboutSec = () => {
                     className="flex flex-col px-5 items-start sm:w-1/2 gap-5"
                     whileInView={{ opacity: 1, x: 0 }}
                     initial={{ opacity: 0, x: -100 }}
-                   
+                    viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.2 }}
                 >
                     <p className='tracking-wider md:text-[18px] xl:text-[20px]'>
@@ -40,7 +40,7 @@ export const AboutSec = () => {
                     className='px-5 sm:w-1/2'
                     whileInView={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0.8 }}
-                   
+                    viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.4 }}
                 >
                     <img src={About} alt="About the initiative" className='w-full' />
