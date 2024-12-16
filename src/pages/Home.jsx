@@ -8,7 +8,7 @@ import { Video } from "../components/Video"
 import Vid from "../assets/hold.mp4"
 import { SectionalComponent } from "../components/SectionalComponent"
 import ReferralImage from "../assets/second.jpg";
-export const Home = () => {
+const Home = () => {
     return (
         <>
 
@@ -44,3 +44,4 @@ export const Home = () => {
         </>
     )
 }
+export default Home

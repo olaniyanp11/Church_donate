@@ -6,7 +6,7 @@ import { Mission } from '../components/Mission'
 import Footer from '../components/Footer'
 import { Button } from '../components/Button'
 
-export const About = () => {
+const About = () => {
   return (
     <>
       <Nav textColor='black' shadow={true} />
@@ -87,3 +87,4 @@ export const About = () => {
     </>
   )
 }
+export default About

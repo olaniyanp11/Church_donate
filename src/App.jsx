@@ -1,30 +1,24 @@
-import { useState, useEffect } from 'react';
-import { Home } from './pages/Home';
-import "./index.css";
-import { Loader } from "./components/Loader.jsx/Loader";
+import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import "./index.css";
+import { Loader } from "./components/Loader/Loader";
 import NotFound from './pages/NotFound';
-import { About } from './pages/About';
 
-const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
 
-  useEffect(() => {
-    setTimeout(() => setIsLoading(false), 1000); // Simulating loading time
-  }, []);
-
+ const App = () => {
   return (
-    <>
-      {isLoading && <Loader width={16} />}  {/* Show loader until loading is done */}
-      <Router>
+    <Router>
+      <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path="/" element={<Home isLoading={isLoading} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </Router>
-    </>
+      </Suspense>
+    </Router>
   );
-};
-
-export default App;
+ };
+export default App
