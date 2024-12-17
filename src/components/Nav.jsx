@@ -70,6 +70,10 @@ export const Nav = ({ bgColor = "bg-transparent", textColor = "text-white", hove
 
                     <Link to='/impact' className={`${hoverColor}`}>Impact and Success Report</Link>
                     <Link to='/register' className={`${hoverColor}`}>Register For Support</Link>
+
+                    {/* New "Contact Us" Link */}
+                    <Link to='/contact' className={`${hoverColor}`}>Contact Us</Link>
+
                     <Button
                         text={"Donate"}
                         bg={"bg-accent"}
@@ -131,6 +135,10 @@ export const Nav = ({ bgColor = "bg-transparent", textColor = "text-white", hove
 
                     <Link to='/impact' className='block mb-4 text-white hover:text-accent'>Impact and Success Report</Link>
                     <Link to='/register' className='block mb-4 text-white hover:text-accent'>Register For Support</Link>
+
+                    {/* New "Contact Us" Link in Sidebar */}
+                    <Link to='/contact' className='block mb-4 text-white hover:text-accent'>Contact Us</Link>
+
                     <Button text={"Donate"} bg={"bg-accent"} width={170} />
                 </div>
             </div>

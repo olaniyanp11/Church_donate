@@ -10,6 +10,8 @@ const HowToSupport = lazy(() => import("./pages/HowToSupport"));
 const OurImpact = lazy(() => import("./pages/OurImpact"));
 const RegisterSupport = lazy(() => import("./pages/RegisterSupport"));
 const GiveSupport = lazy(() => import("./pages/GiveSupport"));
+const ReferMinister = lazy(() => import("./pages/ReferMinister"));
+const ContactUs = lazy(() => import("./pages/ContactUs"));
 const App = () => {
   return (
     <Router>
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/impact" element={<OurImpact />} />
           <Route path="/register" element={<RegisterSupport />} />
           <Route path="/give-support" element={<GiveSupport />} />
+          <Route path="/refer-minister" element={<ReferMinister />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
