@@ -9,7 +9,7 @@
 }
 
 .main {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.466)), url("./assets/baby.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.466)), url("./assets/herrr.jpg");
 
 }
 
@@ -25,4 +25,16 @@
 .back {
     background-image: linear-gradient(30deg, #04344fa8, 80%, #606135da), url("./assets/i .webp");
     background-attachment: fixed;
+}
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-infinite-slider {
+  animation: infinite-scroll 20s linear infinite;
 }
