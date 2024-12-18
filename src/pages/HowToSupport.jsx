@@ -2,7 +2,7 @@ import React from 'react';
 import { Nav } from '../components/Nav';
 import Footer from '../components/Footer';
 import Main from "../assets/chr.jpg";
-import Money from "../assets/group.png";
+import Money from "../assets/social.jpg";
 import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
 import { SectionalComponent } from '../components/SectionalComponent';
@@ -40,6 +40,7 @@ const HowToSupport = () => {
                 <motion.h2
                     className="text-center text-white font-bold text-[29px]"
                     initial={{ opacity: 0 }}
+                    viewport={{ once: true }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                 >
@@ -48,6 +49,7 @@ const HowToSupport = () => {
                 <motion.p
                     className='sm:w-[80%] w-full'
                     initial={{ opacity: 0 }}
+                    viewport={{ once: true }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                 >
@@ -58,21 +60,25 @@ const HowToSupport = () => {
                     start={1} type='circle'
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+
                     transition={{ duration: 0.8, delay: 0.8 }}
                 >
                     <li>Sponsor a minister in need.</li>
                     <li>Support outreach programs and training.</li>
                     <li>Make a one-time gift or set up recurring donations.</li>
                 </motion.ol>
-                <motion.Link
-                    to="#"
-                    className='bg-white text-accent p-2 px-7 font-medium'
+                <Link
+                    to="/give-support"
+                    className='bg-white text-accent p-2 px-4 font-medium'
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+
                     transition={{ duration: 0.8, delay: 1 }}
                 >
-                    Learn More & Give Now
-                </motion.Link>
+                    Learn more & Give Now
+                </Link>
             </section>
 
             <SectionalComponent
@@ -80,7 +86,7 @@ const HowToSupport = () => {
                 imageSrc={Pastor}
                 buttonWidth={300}
                 buttonText={"Learn More & Refer Now"}
-                buttonLink={"#"}
+                buttonLink={"/refer-minister"}
                 description={[
                     "Do you know a minister struggling to make ends meet?",
                     "Your referral could be the lifeline they need. Help us identify those who could benefit from this initiative by sharing their story.",
@@ -92,24 +98,21 @@ const HowToSupport = () => {
             <motion.section
                 className="w-full py-10 sm:px-28 px-4 sm:pl-32 text-white bg-primary flex flex-col md:flex-row-reverse items-center gap-24 rounded-md"
                 initial={{ opacity: 0 }}
+                viewport={{ once: true }}
+
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1 }}
             >
                 {/* Text Column */}
                 <div className="flex flex-col items-start md:w-1/2 gap-6">
                     <h2 className="text-center text-white font-bold text-[29px]">
-                        Give to Support
+                        Spread the Word
                     </h2>
                     <p className="sm:w-[80%] w-full text-left">
-                        Your financial contribution directly impacts ministers facing critical challenges. By giving, you enable us to provide essential resources, training, and mentorship that empower them to thrive in their calling.
+                        Be an advocate for ministers in need by sharing this initiative with your network. Together, we can reach even more people and extend our support further.
                     </p>
-                    <ol className="sm:w-[80%] w-full text-left" start={1} type="circle">
-                        <li>Sponsor a minister in need.</li>
-                        <li>Support outreach programs and training.</li>
-                        <li>Make a one-time gift or set up recurring donations.</li>
-                    </ol>
-                    <Link to="#" className="bg-white text-accent p-2 px-7 font-medium">
-                        Learn More & Give Now
+                    <Link to="/contact" className="bg-white text-accent p-2 px-7 font-medium">
+                        Share on Social Media
                     </Link>
                 </div>
 
@@ -117,8 +120,9 @@ const HowToSupport = () => {
                 <motion.div
                     className="md:w-1/2 transform transition-all duration-500 hover:scale-105"
                     initial={{ opacity: 0 }}
+                    viewport={{ once: true }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 1.2 }}
+                    transition={{ duration: 1, delay: 0.5 }}
                 >
                     <img
                         src={Money}

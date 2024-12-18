@@ -50,7 +50,7 @@ const ReferMinister = () => {
                             <ul className="list-decimal pl-6 mt-2">
                                 <li>Record a short video explaining the minister's situation and why they need support.</li>
                                 <li>Include their name, location, and your contact information.</li>
-                                <li>Email the video to <a href="mailto:support@ismministerssupport.org" className="text-accent">support@ismministers<br/>support.org</a>.</li>
+                                <li>Email the video to <a href="mailto:support@ismministerssupport.org" className="text-accent">support@ismministers<br />support.org</a>.</li>
                             </ul>
                         </div>
                         <FaVideo className="text-accent text-3xl" />
@@ -83,14 +83,13 @@ const ReferMinister = () => {
                         <div className="text-lg mb-4">
                             <p>Your action could be the turning point in someone’s life. Take the first step today and help us bring hope to a minister in need.</p>
                         </div>
-                        <a href="#submit" className="text-white bg-accent px-4 py-2 rounded-full hover:bg-blue-600 transition">
+                        <a href="/register" className="text-white bg-accent px-4 py-2 rounded-full hover:bg-blue-600 transition">
                             <FaHeart className="inline-block mr-2 text-accent" />
                             Submit Your Referral
                         </a>
                     </motion.div>
                 </div>
             </div>
-
             {/* Image Section */}
             <section className="w-full py-12 px-6 bg-light-gray text-center">
                 <motion.div

@@ -20,7 +20,7 @@ const Home = () => {
                 description="Partner with us to make a difference. Your donations provide crucial support to ministers around the world. Visit our donation page to contribute securely and help us reach more ministers in need."
                 extraText="Every gift counts, and together, we can create lasting impact."
                 linkText="Get Involved"
-                linkUrl="/donate"
+                linkUrl="https://bit.ly/ISM-Ministers-Support"
                 reverse={true}
             />
             <Video
@@ -35,7 +35,7 @@ const Home = () => {
                 title="Know a Minister in Need? Refer Them Today"
                 description="If you know a minister facing challenges, help us support them by referring them to the program. We will provide the resources they need to continue their work."
                 buttonText="Refer a Minister"
-                buttonLink="/referral"
+                buttonLink="/refer-minister"
                 imageSrc={ReferralImage}
                 imageAlt="Minister referral"
                 reverse={true} />

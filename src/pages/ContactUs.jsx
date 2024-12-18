@@ -3,6 +3,7 @@ import { FaChevronDown, FaChevronUp, FaFacebookF, FaInstagram, FaTwitter, FaYout
 import { Nav } from '../components/Nav';
 import Footer from '../components/Footer';
 import IMAGE from '../assets/Contact.jpg'
+import { Link } from 'react-router-dom';
 
 const ContactUs = () => {
     const handleSubmit = (e) => {
@@ -209,8 +210,10 @@ const ContactUs = () => {
                                     How do I apply for support?
                                     {activeIndex === 0 ? <FaChevronUp /> : <FaChevronDown />}
                                 </button>
-                                <div className={`text-gray-600 mt-2 ${activeIndex === 0 ? 'block' : 'hidden'}`}>
-                                    Details about applying for support...
+                                <div className={`text-gray-600 text-left mt-2 ${activeIndex === 0 ? 'block' : 'hidden'}`}>
+                                    Submit a short video explaining your situation and why you need support.
+                                    Email your video to support@ismministerssupport.org.
+                                    Once received, our team will carefully review it and contact you with further instructions if your application is approved.
                                 </div>
                             </div>
 
@@ -222,8 +225,9 @@ const ContactUs = () => {
                                     How do I refer a minister in need?
                                     {activeIndex === 1 ? <FaChevronUp /> : <FaChevronDown />}
                                 </button>
-                                <div className={`text-gray-600 mt-2 ${activeIndex === 1 ? 'block' : 'hidden'}`}>
-                                    Details about referring a minister...
+                                <div className={`text-left text-gray-600 mt-2 ${activeIndex === 1 ? 'block' : 'hidden'}`}>
+                                    Record a video sharing their story and explaining why they should receive support.
+                                    Send the video to support@ismministerssupport.org.
                                 </div>
                             </div>
 
@@ -235,8 +239,8 @@ const ContactUs = () => {
                                     How can I give to support the initiative?
                                     {activeIndex === 2 ? <FaChevronUp /> : <FaChevronDown />}
                                 </button>
-                                <div className={`text-gray-600 mt-2 ${activeIndex === 2 ? 'block' : 'hidden'}`}>
-                                    Details about giving support...
+                                <div className={`text-gray-600 text-left mt-2 ${activeIndex === 2 ? 'block' : 'hidden'}`}>
+                                    Click <Link to=" https://bit.ly/ISM-Ministers-Support" className='text-blue-500'>here </Link> to Visit our donations to contribute securely and help us reach more ministers in need.
                                 </div>
                             </div>
 
@@ -248,13 +252,14 @@ const ContactUs = () => {
                                     How do I get updates on the program’s progress?
                                     {activeIndex === 3 ? <FaChevronUp /> : <FaChevronDown />}
                                 </button>
-                                <div className={`text-gray-600 mt-2 ${activeIndex === 3 ? 'block' : 'hidden'}`}>
-                                    Details about updates...
+                                <div className={`text-left text-gray-600 mt-2 ${activeIndex === 3 ? 'block' : 'hidden'}`}>
+                                    Sign up for our newsletter or follow us on social media to receive regular updates on the program’s progress and impact.
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
 
                 <Footer />
             </>

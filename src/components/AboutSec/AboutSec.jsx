@@ -30,7 +30,7 @@ export const AboutSec = () => {
                     <p className='tracking-wider md:text-[18px] xl:text-[20px]'>
                         The Ministers Support Program is dedicated to helping ministers facing financial challenges, lack of resources, or other challenges, so they can continue their important work in spreading the gospel. With your support, we provide resources, training, and financial aid to help ministers thrive and be effective in ministry.
                     </p>
-                    <Link to='/' className="bg-accent p-2 text-white px-10 text-center w-[250px]">
+                    <Link to='/about' className="bg-accent p-2 text-white px-10 text-center w-[250px]">
                         Learn more
                     </Link>
                 </motion.div>

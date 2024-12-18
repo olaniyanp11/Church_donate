@@ -46,7 +46,7 @@ export const How = () => {
                     <p className="text-lg text-primary">
                         We connect approved ministers with an ISM pastor in their region who will provide foundational training and specialized ISM resources to strengthen their ministry and support their specific needs.
                     </p>
-                    <Link to="/impact-report" className="inline-block bg-accent text-white px-8 py-3 text-lg font-semibold rounded-md text-center shadow-md hover:shadow-xl transition-all">
+                    <Link to="/impact" className="inline-block bg-accent text-white px-8 py-3 text-lg font-semibold rounded-md text-center shadow-md hover:shadow-xl transition-all">
                         See our Impact Report
                     </Link>
                 </motion.div>
@@ -67,7 +67,7 @@ export const How = () => {
                     <p className="text-lg text-primary">
                         Together, we can bring hope and relief to ministers in difficult situations.
                     </p>
-                    <Link to="/refer" className="inline-block bg-accent text-white px-8 py-3 text-lg font-semibold rounded-md text-center shadow-md hover:shadow-xl transition-all">
+                    <Link to="/refer-minister" className="inline-block bg-accent text-white px-8 py-3 text-lg font-semibold rounded-md text-center shadow-md hover:shadow-xl transition-all">
                         Refer A Minister in Need
                     </Link>
                 </motion.div>

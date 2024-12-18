@@ -11,6 +11,7 @@ import Five from "../assets/five.jpg"
 import Six from "../assets/six.jpg"
 import Before from "../assets/eight2.jpg"
 import After from "../assets/eight.jpg"
+import { Link } from 'react-router-dom'
 
 const OurImpact = () => {
     return (
@@ -54,7 +55,7 @@ const OurImpact = () => {
                 >
                     <div className="max-w-6xl mx-auto text-center">
                         <h2 className="text-2xl font-bold text-white">Our Reach</h2>
-                        <p className="mt-4 text-gray-400">A snapshot of what we’ve accomplished so far:</p>
+                        <p className="mt-4 text-accent font-medium">A snapshot of what we’ve accomplished so far:</p>
 
                         {/* Grid Layout */}
                         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -95,7 +96,7 @@ const OurImpact = () => {
                         </div>
 
                         {/* Button */}
-                        <button className="mt-8 px-6 py-3 bg-accent text-white rounded-full hover:bg-indigo-500 transition-colors">
+                        <button className="mt-8 px-6 py-3 bg-accent text-white rounded-full hover:bg-blue-500 transition-colors">
                             See Full Statistics
                         </button>
                     </div>
@@ -124,7 +125,7 @@ const OurImpact = () => {
                                 </p>
                             </div>
                         </div>
-                        <button className="mt-8 px-6 py-2 bg-accent text-white rounded hover:bg-indigo-500">
+                        <button className="mt-8 px-6 py-2 bg-accent text-white rounded hover:bg-blue-500">
                             Read More Inspiring Stories
                         </button>
                     </div>
@@ -241,12 +242,12 @@ const OurImpact = () => {
                         <h2 className="text-2xl font-bold text-accent">Join the Movement</h2>
                         <p className="mt-4 text-gray-700">Be a part of our continued success:</p>
                         <div className="mt-8 flex flex-col md:flex-row justify-center gap-4">
-                            <button className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-indigo-500 transition-all">
+                            <Link to="https://bit.ly/ISM-Ministers-Support" className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-blue-500 transition-all">
                                 Donate Now
-                            </button>
-                            <button className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-indigo-500 transition-all">
+                            </Link>
+                            <Link to="/contact" className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-blue-500 transition-all">
                                 Become a Volunteer
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </motion.section>

@@ -18,9 +18,9 @@ const Footer = () => {
                     <ul className="space-y-2">
                         <li><Link to="/" className="hover:text-blue-400">Home</Link></li>
                         <li><Link to="https://bit.ly/ISM-Ministers-Support" className="hover:text-blue-400">Donate</Link></li>
-                        <li><Link to="/refer-a-minister" className="hover:text-blue-400">Refer a Minister</Link></li>
-                        <li><Link to="/impact-stories" className="hover:text-blue-400">Impact Stories</Link></li>
-                        <li><Link to="/register-minister" className="hover:text-blue-400">Register As a Minister in Need</Link></li>
+                        <li><Link to="/refer-minister" className="hover:text-blue-400">Refer a Minister</Link></li>
+                        <li><Link to="/impact" className="hover:text-blue-400">Impact Stories</Link></li>
+                        <li><Link to="/register" className="hover:text-blue-400">Register As a Minister in Need</Link></li>
                         <li><Link to="/about" className="hover:text-blue-400">About Us</Link></li>
                         <li><Link to="/contact" className="hover:text-blue-400">Contact Us</Link></li>
                     </ul>

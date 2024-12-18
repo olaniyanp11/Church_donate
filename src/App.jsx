@@ -1,9 +1,11 @@
-import { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Suspense, lazy, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 import "./index.css";
 import { Loader } from "./components/Loader/Loader";
 import NotFound from './pages/NotFound';
+
+// Lazy-loaded pages
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const HowToSupport = lazy(() => import("./pages/HowToSupport"));
@@ -12,9 +14,22 @@ const RegisterSupport = lazy(() => import("./pages/RegisterSupport"));
 const GiveSupport = lazy(() => import("./pages/GiveSupport"));
 const ReferMinister = lazy(() => import("./pages/ReferMinister"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
+
+// Scroll to top component
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, [pathname]);
+
+  return null;
+};
+
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -31,4 +46,5 @@ const App = () => {
     </Router>
   );
 };
-export default App
+
+export default App;

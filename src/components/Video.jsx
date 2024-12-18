@@ -12,7 +12,11 @@ export const Video = ({
 }) => {
     return (
         <div className='flex justify-center w-full p-5'>
-            <div className='w-full max-w-[1200px] relative h-[75vh] md:h-screen rounded-2xl'>
+            <motion.div
+                initial={{ z: 1000, y: 100 }}
+                whileInView={{ z: 0, y: 0 }}
+                transition={{ duration: 2 }}
+                className='w-full max-w-[1200px] relative h-[75vh] md:h-screen rounded-2xl'>
                 {/* Video */}
                 <video
                     src={videoSrc}
@@ -57,7 +61,7 @@ export const Video = ({
                         </Link>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };

@@ -75,7 +75,7 @@ const GiveSupport = () => {
                             <li><span className='font-bold'>General Donation :</span>  Contribute to our overall mission to reach as many ministers as possible.</li>
                             <li><span className='font-bold '>Recurring Giving : </span> Set up automatic monthly donations to sustain long-term impact.</li>
                         </ol>
-                        <Link to="" className='w-[300px] py-3 bg-primary text-white font-bold px-20'>Give Now</Link>
+                        <Link to="https://bit.ly/ISM-Ministers-Support" className='w-[300px] py-3 bg-primary text-white font-bold px-20'>Give Now</Link>
                     </div>
 
                     {/* Image Section */}

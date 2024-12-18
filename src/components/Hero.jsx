@@ -35,7 +35,7 @@ export const Hero = ({ isLoading }) => {
                     {/* Animated buttons */}
                     <div className="w-full flex gap-2 sm:gap-10 flex-wrap">
                         <Link
-                            to="/"
+                            to="https://bit.ly/ISM-Ministers-Support"
                             className="bg-accent p-2 text-white px-10 text-center w-full sm:w-[300px]"
                            
                         >
@@ -43,7 +43,7 @@ export const Hero = ({ isLoading }) => {
                         </Link>
 
                         <Link
-                            to="/"
+                            to="/register"
                             className="bg-transparent border p-2 text-white px-10 text-center w-full sm:w-[300px]"
                            
                         >
