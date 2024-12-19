@@ -15,6 +15,7 @@ export const Video = ({
             <motion.div
                 initial={{ z: 1000, y: 100 }}
                 whileInView={{ z: 0, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 2 }}
                 className='w-full max-w-[1200px] relative h-[75vh] md:h-screen rounded-2xl'>
                 {/* Video */}
@@ -37,6 +38,7 @@ export const Video = ({
                             className='font-bold text-[30px] md:text-[50px] leading-[1.2]'
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
+                            viewport={{once:true}}
                             transition={{ duration: 0.8 }}
                         >
                             {heading}
@@ -47,6 +49,7 @@ export const Video = ({
                             className='text-[16px] md:text-[20px]'
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
+                            viewport={{once:true}}
                             transition={{ duration: 0.8, delay: 0.2 }}
                         >
                             {description}

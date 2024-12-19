@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Loader = ({ width }) => {
+ const Loader = ({ width }) => {
   return (
     <>
       <div className='w-full z-50 h-screen bg-accent fixed  top-0 flex justify-center items-center flex-col'>
@@ -11,3 +11,5 @@ export const Loader = ({ width }) => {
     </>
   )
 }
+
+export default Loader

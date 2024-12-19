@@ -1,79 +1,50 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form"; // Import react-hook-form
 import axios from "axios";
 import Logo from "/logo.png";
 
 const ChurchForm = () => {
-    // State for form data
-    const [formData, setFormData] = useState({
-        fullName: "",
-        ministryName: "",
-        email: "",
-        challenges: "",
-        video: "",
-        photos: []
-    });
-
+    // State for form submission status
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [submissionStatus, setSubmissionStatus] = useState(null); // 'success' or 'error'
     const [errorMessage, setErrorMessage] = useState("");
-    const [isLoading, setIsLoading] = useState(false); // Loading state for button
+    const [isLoading, setIsLoading] = useState(false); // Loading state
 
-    // Handle form field changes
-    const handleChange = (e) => {
-        const { name, value, type, files } = e.target;
+    // Initialize React Hook Form
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
-        // Update formData state based on input type
-        if (type === "file") {
-            setFormData({
-                ...formData,
-                [name]: files // Handle file uploads
-            });
-        } else {
-            setFormData({
-                ...formData,
-                [name]: value // Handle regular inputs (text, email, etc.)
-            });
-        }
-    };
+    // Handle form submission
+    const onSubmit = async (data) => {
+        setIsLoading(true); // Set loading state immediately when form is being submitted
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        setIsLoading(true); // Set loading state immediately when the form is being submitted
-
-        const formToSend = new FormData();
-        for (const [key, value] of Object.entries(formData)) {
+        const formData = new FormData();
+        Object.entries(data).forEach(([key, value]) => {
             if (key === "photos" && value.length > 0) {
-                // If photos exist, append them to FormData
-                Array.from(value).forEach((file) => {
-                    formToSend.append(key, file);
-                });
+                Array.from(value).forEach((file) => formData.append(key, file));
             } else {
-                formToSend.append(key, value);
+                formData.append(key, value);
             }
-        }
+        });
 
         try {
-            const response = await axios.post("/your-api-endpoint", formToSend, {
+            const response = await axios.post("./support.php", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data", // Handle file upload
                 },
             });
 
-            // If the response is successful
             if (response.status === 200) {
                 setSubmissionStatus("success");
+                reset(); // Reset the form on successful submission
             }
         } catch (error) {
-            // If there's an error during submission
             setSubmissionStatus("error");
             setErrorMessage(error.response ? error.response.data.message : "Something went wrong");
         }
 
-        setIsLoading(false); // Reset loading state after submission attempt
-        setIsSubmitted(true); // Trigger the popup after submission attempt
+        setIsLoading(false);
+        setIsSubmitted(true); // Trigger popup after submission
     };
-
 
     const closePopup = () => {
         setIsSubmitted(false);
@@ -92,7 +63,7 @@ const ChurchForm = () => {
                 </div>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-lg">
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                         <div>
                             <label htmlFor="full-name" className="block text-sm font-medium text-gray-900">
                                 Full Name
@@ -102,12 +73,13 @@ const ChurchForm = () => {
                                     id="full-name"
                                     name="fullName"
                                     type="text"
-                                    value={formData.fullName}
-                                    onChange={handleChange}
-                                    required
+                                    {...register("fullName", { required: "Full Name is required" })}
                                     className="block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-primary"
                                     placeholder="Enter your full name"
                                 />
+                                {errors.fullName && (
+                                    <p className="text-red-500 text-xs mt-1">{errors.fullName.message}</p>
+                                )}
                             </div>
                         </div>
 
@@ -120,12 +92,13 @@ const ChurchForm = () => {
                                     id="ministry-name"
                                     name="ministryName"
                                     type="text"
-                                    value={formData.ministryName}
-                                    onChange={handleChange}
-                                    required
+                                    {...register("ministryName", { required: "Ministry Name is required" })}
                                     className="block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-primary"
                                     placeholder="Enter your ministry name"
                                 />
+                                {errors.ministryName && (
+                                    <p className="text-red-500 text-xs mt-1">{errors.ministryName.message}</p>
+                                )}
                             </div>
                         </div>
 
@@ -138,12 +111,13 @@ const ChurchForm = () => {
                                     id="email"
                                     name="email"
                                     type="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    required
+                                    {...register("email", { required: "Email is required", pattern: { value: /^\S+@\S+\.\S+$/, message: "Invalid email" } })}
                                     className="block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-primary"
                                     placeholder="Enter your email"
                                 />
+                                {errors.email && (
+                                    <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
+                                )}
                             </div>
                         </div>
 
@@ -155,13 +129,14 @@ const ChurchForm = () => {
                                 <textarea
                                     id="challenges"
                                     name="challenges"
-                                    value={formData.challenges}
-                                    onChange={handleChange}
-                                    required
+                                    {...register("challenges", { required: "Challenges are required" })}
                                     rows="4"
                                     className="block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-primary"
                                     placeholder="Briefly describe the challenges you are facing"
                                 ></textarea>
+                                {errors.challenges && (
+                                    <p className="text-red-500 text-xs mt-1">{errors.challenges.message}</p>
+                                )}
                             </div>
                         </div>
 
@@ -173,10 +148,10 @@ const ChurchForm = () => {
                                 id="video"
                                 name="video"
                                 type="text"
-                                value={formData.video}
-                                onChange={handleChange}
+                                {...register("video")}
                                 className="block w-full text-gray-900"
                                 placeholder="Enter the URL to your video"
+                                required
                             />
                         </div>
 
@@ -191,7 +166,7 @@ const ChurchForm = () => {
                                     type="file"
                                     accept="image/*"
                                     multiple
-                                    onChange={handleChange}
+                                    {...register("photos")}
                                     className="block w-full text-gray-900"
                                 />
                             </div>
@@ -203,16 +178,24 @@ const ChurchForm = () => {
                                 disabled={isLoading} // Disable the button when loading
                                 className="flex w-full justify-center rounded-md bg-primary px-3 py-3 text-white text-sm font-semibold shadow-sm hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                             >
-                                {isLoading ? (
-                                 "Loading..."
-                                ) : (
-                                    "Submit Application"
-                                )}
+                                {isLoading ? "Loading..." : "Submit Application"}
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
+
+            {/* Loading Popup */}
+            {isLoading && (
+                <div className="fixed inset-0 bg-primary bg-opacity-50 flex justify-center items-center z-50">
+                    <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+                        <p className="text-xl font-semibold">Sending your message...</p>
+                        <div className="mt-4">
+                            <div className="animate-spin rounded-full border-t-4 border-primary h-16 w-16 mx-auto"></div>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* Confirmation Modal */}
             {isSubmitted && (
