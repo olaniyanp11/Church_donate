@@ -101,6 +101,37 @@ const ChurchForm = () => {
                                 )}
                             </div>
                         </div>
+                        <div>
+                            <label htmlFor="ministry-name" className="block text-sm font-medium text-gray-900">
+                             Support Category
+                            </label>
+                            <div className="mt-2">
+                     
+                                <select
+                                    name="supportCategory"
+                                    id="supportCategory"
+                                    {...register('supportCategory', { required: "Support Category is required"})}
+                                    className="block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-primary"
+                                >
+                                    <option value="Food Relief" className="hover:bg-accent">
+                                        Food Relief
+                                    </option>
+                                    <option value="Musical Instruments" className="active:bg-accent">
+                                        Musical Instruments
+                                    </option>
+                                    <option value="Custom Support" className="active:bg-accent">
+                                        Custom Support
+                                    </option>
+                                    <option value="Multimedia and Sound Systems" className="active:bg-accent">
+                                        Multimedia and Sound Systems
+                                    </option>
+                                </select>
+
+                                {errors.ministryName && (
+                                    <p className="text-red-500 text-xs mt-1">{errors.ministryName.message}</p>
+                                )}
+                            </div>
+                        </div>
 
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-gray-900">

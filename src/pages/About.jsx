@@ -1,11 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';  // Import framer-motion
-import Main from "../assets/about.jpg";
+import Main from "../assets/one.jpg";
 import { Nav } from '../components/Nav';
 import { Link } from 'react-router-dom';
 import { Mission } from '../components/Mission';
 import Footer from '../components/Footer';
-import { Button } from '../components/Button';
 
 const About = () => {
   return (
@@ -41,8 +40,7 @@ const About = () => {
           >
             <h2 className='text-[25px] font-bold text-accent text-center leading-[0.1]'>Who We Are?</h2>
             <p className='tracking-wider md:text-[18px] xl:text-[20px]'>
-              The ISM Ministers’ Support Initiative is a global outreach program dedicated to supporting ministers of the gospel in dire need. We believe that every minister deserves the strength and resources to fulfill their divine calling. Through practical assistance, mentorship, and spiritual training, we stand with ministers facing challenging circumstances, ensuring they remain equipped to lead and inspire their congregations.
-            </p>
+              The ISM Ministers’ Support Initiative is a global outreach program dedicated to uplifting ministers of the gospel in dire need. We provide targeted support across three key categories—Food Relief, Musical Instruments, and Multimedia & Sound Equipment—ensuring that every minister has the practical resources needed to fulfill their divine calling. <br /> In addition, each minister receives mentorship and spiritual training through a one-month foundational program in the ISM Online School, empowering them to lead and inspire their congregations despite challenging circumstances.  </p>
           </motion.div>
 
           <motion.div
@@ -60,15 +58,7 @@ const About = () => {
 
       <section className="w-full px-8 py-12 bg-accent">
         <div className="max-w-7xl mx-auto">
-          <motion.h2
-            className="text-3xl font-bold text-center mb-8 text-white"
-            initial={{ opacity: 0 }}
-            viewport={{ once: true }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-          >
-            What We Do
-          </motion.h2>
+         
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
@@ -133,7 +123,7 @@ const About = () => {
             <p className='tracking-wider md:text-[18px] xl:text-[20px]'>
               Join us in making a difference. Whether you’re a minister seeking help, someone who knows a minister in need, or a supporter with a heart to give, you can play a part in this life-changing initiative.
             </p>
-            <Link to="/register" className="inline-block bg-accent text-white px-8 py-3 text-lg font-semibold rounded-md text-center shadow-md hover:shadow-xl transition-all w-[300px]">
+            <Link to="/how-to-support" className="inline-block bg-accent text-white px-8 py-3 text-lg font-semibold rounded-md text-center shadow-md hover:shadow-xl transition-all w-[300px]">
               Join Us
             </Link>
           </motion.div>

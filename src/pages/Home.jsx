@@ -8,12 +8,14 @@ import { Video } from "../components/Video"
 import Vid from "../assets/hold.mp4"
 import { SectionalComponent } from "../components/SectionalComponent"
 import ReferralImage from "../assets/second.jpg";
+import Categories from '../components/Categories'
 const Home = () => {
     return (
         <>
 
             <Hero />
             <AboutSec />
+            <Categories />
             <How />
             <SupportCard
                 title="Give to Support Ministers in Need"

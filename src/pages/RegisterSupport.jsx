@@ -48,17 +48,21 @@ const RegisterSupport = () => {
             <section class="py-12 bg-gray-50">
                 <div class="max-w-7xl mx-auto px-6 lg:px-8">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                      
+
                         <div class="bg-white rounded-lg shadow-lg p-6">
                             <h3 class="text-xl font-bold text-primary mb-4">Eligibility Requirements</h3>
                             <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <h2>Before registering, ensure you meet the following criteria:
+                                </h2>
                                 <li>You are a minister actively serving in a church or ministry.</li>
-                                <li>You are facing genuine challenges that affect your ability to minister effectively.</li>
-                                <li>You are willing to share your story and participate in ISM foundational training.</li>
+                                <li>You are facing genuine challenges that affect your ability to minister effectively (Food and basic care challenges, musical instrument and multimedia equipment challenges).
+                                </li>
+                                <li>You are willing to share your story and participate in ISM foundational training.
+                                </li>
                             </ul>
                         </div>
 
-                     
+
                         <div class="bg-white rounded-lg shadow-lg p-6">
                             <h3 class="text-xl font-bold text-primary mb-4">How to Apply</h3>
                             <ol class="list-decimal list-inside text-gray-700 space-y-3">
@@ -66,7 +70,7 @@ const RegisterSupport = () => {
                                     <strong>Fill in Your Details:</strong> Complete the registration form below, providing accurate information about yourself and your ministry.
                                 </li>
                                 <li>
-                                    <strong>Submit a Short Video:</strong> Upload or email a short video (3-5 minutes) explaining:
+                                    <strong>Submit a Short Video:</strong> Upload  a short video (3-5 minutes) explaining:
                                     <ul class="list-disc pl-6 mt-2">
                                         <li>The challenges you’re facing.</li>
                                         <li>Why you need support.</li>
@@ -82,7 +86,7 @@ const RegisterSupport = () => {
                             </ol>
                         </div>
 
-              
+
                         <div class="bg-white rounded-lg shadow-lg p-6">
                             <h3 class="text-xl font-bold text-primary mb-4">What Happens Next?</h3>
                             <ul class="list-disc list-inside text-gray-700 space-y-2">
@@ -124,7 +128,7 @@ const RegisterSupport = () => {
                                 </svg>
                             </span>
                             Applications are reviewed on a rolling basis. Please allow
-                           [X] days 
+                            [X] days
                             for feedback.
                         </li>
                         <li className="flex items-start">
@@ -164,6 +168,25 @@ const RegisterSupport = () => {
                                 </svg>
                             </span>
                             By submitting, you agree to participate in our foundational training if selected.
+                        </li>
+                        <li className="flex items-start">
+                            <span className="mr-3 text-accent">
+                                <svg
+                                    className="w-6 h-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M5 13l4 4L19 7"
+                                    ></path>
+                                </svg>
+                            </span>
+                            Allow up to 14 Days for feedback.
                         </li>
                     </ul>
                 </div>

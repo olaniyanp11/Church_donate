@@ -83,10 +83,10 @@ const ReferMinister = () => {
                         <div className="text-lg mb-4">
                             <p>Your action could be the turning point in someone’s life. Take the first step today and help us bring hope to a minister in need.</p>
                         </div>
-                        <a href="/register" className="text-white bg-accent px-4 py-2 rounded-full hover:bg-blue-600 transition">
+                        <Link to="/register" className="text-white bg-accent px-4 py-2 rounded-full hover:bg-blue-600 transition">
                             <FaHeart className="inline-block mr-2 text-accent" />
                             Submit Your Referral
-                        </a>
+                        </Link>
                     </motion.div>
                 </div>
             </div>

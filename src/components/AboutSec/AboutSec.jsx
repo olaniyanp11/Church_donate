@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../Button';
-import About from "../../assets/group.jpg";
+import About from "../../assets/one.jpg";
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -28,7 +28,7 @@ export const AboutSec = () => {
                     transition={{ duration: 1, delay: 0.2 }}
                 >
                     <p className='tracking-wider md:text-[18px] xl:text-[20px]'>
-                        The Ministers Support Program is dedicated to helping ministers facing financial challenges, lack of resources, or other challenges, so they can continue their important work in spreading the gospel. With your support, we provide resources, training, and financial aid to help ministers thrive and be effective in ministry.
+                        The ISM Ministers’ Support Program is dedicated to providing ministers of the gospel in dire need worldwide with essential support, including food relief, musical instruments, and multimedia equipment, along with a one-month ISM Online School training to equip them for impactful ministry. With your support, we can provide critical resources, training, and financial aid to help these ministers overcome their challenges and continue their divine calling effectively.
                     </p>
                     <Link to='/about' className="bg-accent p-2 text-white px-10 text-center w-[250px]">
                         Learn more
